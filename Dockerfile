@@ -13,7 +13,7 @@ RUN apk add --no-cache git mercurial \
 ADD . /go/src/github.com/sikharis/hapnet
 
 # Use the revel CLI to start up our application.
-ENTRYPOINT revel run github.com/JustinBeckwith/revel-appengine dev 8080
+ENTRYPOINT revel run github.com/sikharis/hapnet dev 8080
 
 # Open up the port where the app is running.
 EXPOSE 8080
