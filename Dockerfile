@@ -2,6 +2,10 @@ FROM golang:1.9-alpine
 
 LABEL maintainer="kharis.hidayatullah@gmail.com"
 
+RUN apk add --no-cache git mercurial \
+    && go get github.com/random/library/that/I/use/ \
+    && apk del git mercurial
+
 # Grab the source code and add it to the workspace.
 ADD . /go/src/github.com/sikharis/hapnet
 
