@@ -1,4 +1,4 @@
-FROM golang:1.9-alpine
+FROM golang:1.8-alpine
 
 LABEL maintainer="kharis.hidayatullah@gmail.com"
 
