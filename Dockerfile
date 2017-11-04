@@ -2,9 +2,10 @@ FROM golang:1.8-alpine
 
 LABEL maintainer="kharis.hidayatullah@gmail.com"
 
+#Add revel version 0.17.1 
+ADD . /go/src/github.com/revel
+
 RUN apk add --no-cache git mercurial \
-    && go get -v -u -t github.com/revel/revel \
-    && go get -v -u -t github.com/revel/cmd/revel \
     && go get -v -u -t github.com/jinzhu/gorm \
     && go get -v -u -t github.com/leekchan/accounting \
     && go get -v -u -t github.com/sikharis/hapnet \    
