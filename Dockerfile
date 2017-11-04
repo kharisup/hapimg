@@ -3,7 +3,7 @@ FROM golang:1.8-alpine
 LABEL maintainer="kharis.hidayatullah@gmail.com"
 
 #Add revel version 0.17.1 
-ADD ../../revel /go/src/github.com/revel
+ADD ./revel /go/bin/
 
 RUN apk add --no-cache git mercurial \
     && go get -v -u -t github.com/jinzhu/gorm \
