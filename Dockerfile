@@ -11,7 +11,7 @@ RUN apk add --no-cache git mercurial \
     && apk del git mercurial
 
 # Grab the source code and add it to the workspace.
-ADD ../hapnet /go/src/github.com/sikharis/hapnet
+ADD ./hapnet.tar.gz /go/src/github.com/sikharis/hapnet
 
 # Use the revel CLI to start up our application.
 #ENTRYPOINT revel run github.com/sikharis/hapnet dev 8080
